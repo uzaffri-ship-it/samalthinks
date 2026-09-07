@@ -2,49 +2,29 @@
 
 # main menu
 [[main]]
-name = "Home"
-url = "/"
+name = "Estimates"
+url = "/estimates"
 weight = 1
 
 [[main]]
-name = "About"
-url = "/about"
+name = "Markets"
+url = "/markets"
 weight = 2
 
 [[main]]
-name = "Elements"
-url = "/elements"
+name = "People"
+url = "/people"
 weight = 3
 
 [[main]]
+name = "Art"
+url = "/art"
 weight = 4
-name = "Pages"
 
 [[main]]
-parent = "Pages"
-name = "Blog"
-url = "/blog"
-
-[[main]]
-parent = "Pages"
-name = "Contact"
-url = "/contact"
-
-[[main]]
-parent = "Pages"
-name = "Authors"
-url = "/authors"
-
-[[main]]
-parent = "Pages"
-name = "Categories"
-url = "/categories"
-
-[[main]]
-parent = "Pages"
-name = "404 Page"
-url = "/404"
-
+name = "Other"
+url = "/other"
+weight = 5
 
 # footer menu
 [[footer]]

@@ -1,0 +1,61 @@
+{{ define "main" }}
+
+  <section class="pt-16 pb-20 lg:pt-20 lg:pb-24">
+    <div class="container">
+      <div class="max-w-3xl">
+
+        <p class="mb-4 text-sm uppercase tracking-[0.25em] opacity-60">
+          {{ .Title }}
+        </p>
+
+        <h1 class="text-h2 leading-tight lg:text-h1">
+          {{ with .Params.description }}
+            {{ . }}
+          {{ else }}
+            Thoughts collected under {{ .Title }}.
+          {{ end }}
+        </h1>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section border-border dark:border-darkmode-border border-t">
+    <div class="container">
+
+      {{ if .RegularPages }}
+        <div class="grid gap-x-14 gap-y-12 md:grid-cols-2">
+          {{ range .RegularPages }}
+
+            <article>
+              <h2 class="mb-3 text-h4">
+                <a href="{{ .RelPermalink }}">
+                  {{ .Title }}
+                </a>
+              </h2>
+
+              {{ with .Params.description }}
+                <p class="max-w-xl leading-relaxed">
+                  {{ . }}
+                </p>
+              {{ else }}
+                {{ with .Summary }}
+                  <p class="max-w-xl leading-relaxed">
+                    {{ . | plainify | truncate 180 }}
+                  </p>
+                {{ end }}
+              {{ end }}
+            </article>
+
+          {{ end }}
+        </div>
+      {{ else }}
+        <p class="text-lg opacity-70">
+          Nothing here yet.
+        </p>
+      {{ end }}
+
+    </div>
+  </section>
+
+{{ end }}
