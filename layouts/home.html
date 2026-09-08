@@ -156,15 +156,25 @@
   </p>
 </div>
 
-      <div class="mt-8 flex flex-wrap gap-6 text-sm font-medium">
-        <a href="#" target="_blank" rel="noopener">
-          LinkedIn
-        </a>
+<div class="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm font-medium">
+  <a href="https://www.linkedin.com/in/aayushman-samal-8a695b251/" target="_blank" rel="noopener noreferrer">
+  LinkedIn
+</a>
 
-        <a href="mailto:samalthinks@gmail.com">
-          Email
-        </a>
-      </div>
+  <span aria-hidden="true">|</span>
+
+  <span>or write to</span>
+
+  <span id="samal-email">samalthinks@gmail.com</span>
+
+  <button
+    type="button"
+    class="text-sm underline underline-offset-4"
+    onclick="navigator.clipboard.writeText('samalthinks@gmail.com').then(() => { this.textContent = 'Copied!'; setTimeout(() => this.textContent = 'Copy', 2000); })"
+  >
+    Copy
+  </button>
+</div>
 
     </div>
   </div>

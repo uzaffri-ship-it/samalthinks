@@ -8,15 +8,23 @@
         SAMALTHINKS
       </a>
 
-      <div class="flex items-center gap-5 text-sm">
-        <a href="mailto:samalthinks@gmail.com">
-          Email
-        </a>
+      <div class="flex flex-wrap items-center gap-3 text-sm">
+  <span>samalthinks@gmail.com</span>
 
-        <a href="#" target="_blank" rel="noopener">
-          LinkedIn
-        </a>
-      </div>
+  <button
+    type="button"
+    class="underline underline-offset-4"
+    onclick="navigator.clipboard.writeText('samalthinks@gmail.com').then(() => { this.textContent = 'Copied!'; setTimeout(() => this.textContent = 'Copy', 2000); })"
+  >
+    Copy
+  </button>
+
+  <span aria-hidden="true">|</span>
+
+  <a href="https://www.linkedin.com/in/aayushman-samal-8a695b251/" target="_blank" rel="noopener noreferrer">
+    LinkedIn
+  </a>
+</div>
 
     </div>
 
